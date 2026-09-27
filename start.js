@@ -6,18 +6,18 @@ const radius = 450;
 const anglePerCanvas = 360 / numberOfCanvases;
 
 const images = [
-  '/images/3dtests4.webp',
-  '/images/3dbook14.webp',
-  '/images/materia9.webp',
-  '/images/mohawk2.webp',
-  '/images/reversible.webp',
-  '/images/printjob21.webp',
-  '/images/textile2.webp',
-  '/images/axelent0.webp',
-  '/images/cd9.webp',
-  '/images/blade8.webp',
-  '/images/imd7.webp',
-  '/images/nitro8.webp'
+  'images/3dtests4.webp',
+  'images/3dbook14.webp',
+  'images/materia9.webp',
+  'images/mohawk2.webp',
+  'images/reversible.webp',
+  'images/printjob21.webp',
+  'images/textile2.webp',
+  'images/axelent0.webp',
+  'images/cd9.webp',
+  'images/blade8.webp',
+  'images/imd7.webp',
+  'images/nitro8.webp'
 ];
 
 // Create canvases
