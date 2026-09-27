@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  background: rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: texts;
+  src: url('/fonts/UniversBold.ttf') format('truetype');
+}
+
+.text {
+  font-family: texts, serif;
+  pointer-events: auto;
+  margin: auto;
+  padding: 0.5rem;
+  max-width: 100vw;
+  
+  /* use flexbox to center content */
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+  height: 100%; /* or set a fixed height if needed */
+}
+
+.text-home {
+  font-size: 0.9rem;
+  animation-name: shade;
+  animation-timing-function: ease-out;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* no grid needed here */
+}
+
+@keyframes shade {
+  0% {
+      color: rgb(0, 0, 0);
+      filter: blur(0px);
+  }
+
+  50% {
+      color: rgb(241, 241, 241);
+      filter: blur(0.5px);
+  }
+
+  100% {
+      color: rgb(0, 0, 0);
+  }
+}
+
+
+.text.hidden {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+a:link, a:visited {
+  /* background-color: #f44336; */
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  color: #b6b6b6;
+}
+
+
+
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+  perspective: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fan-wrapper {
+  transform-style: preserve-3d;
+  transform-origin: center center;
+}
+
+.fan {
+  position: relative;
+  transform-style: preserve-3d;
+  margin: 0%;
+  padding: 0%;
+  top:-175px;
+}
+
+.canvas {
+  position: absolute;
+  width: 220px;
+  height: 337px;
+  background: white;
+  /* box-shadow: 0 10px 30px rgba(0,0,0,0.5); */
+  transform-origin: left;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .text-grid {
+    display: grid;
+    /* grid-template-columns: 3fr; */
+    gap: 10px;
+  }
+
+  .text-home {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    text-align: left;
+  }
+
+
+
+}
