@@ -10,7 +10,7 @@ body {
 
 @font-face {
   font-family: texts;
-  src: url('/fonts/UniversBold.ttf') format('truetype');
+  src: url('fonts/UniversBold.ttf') format('truetype');
 }
 
 nav {
